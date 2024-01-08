@@ -7,6 +7,23 @@
     <link rel="preload" href="fonts/cormorant-v11-latin_cyrillic-700.woff2" as="font"
         type="font/woff2" crossorigin>
 
+    <style>
+        :root {
+            --main-color: #ffffff;
+            --second-color: #262626;
+            --one-color: #006F55;
+            --two-color: #00654E;
+            --three-color: #005844;
+            --main-bg-color: #005844;
+            --second-bg-color: #C0B487;
+            --trigger-color: #E5AB39;
+            --url-features-one: url("../img/tree.svg");
+            --url-features-two: url("../img/christmas-decorations.svg");
+            --url-features-three: url("../img/flowers.svg");
+            --url-features-four: url("../img/delivery-truck.svg");
+        }
+        </style>
+
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/header.css">
@@ -14,6 +31,10 @@
     <link rel="stylesheet" href="style/burger.css">
     <link rel="stylesheet" href="style/navigation.css">
     <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/features.css">
+    <link rel="stylesheet" href="style/product.css">
+
+    <script src="garland/garland.js" defer></script>
     
 
 </head>
@@ -75,28 +96,61 @@
 
         <section class="features">
             <div class="container">
-                
+                <h2 class="visually-hidden">Преимущества</h2>
+                <ul class="features__list">
+                    <li class="features__item features__item_one">Пушистые и ароматные ёлочки</li>
+                    <li class="features__item features__item_two">Набор ёлочных украшений в подарок</li>
+                    <li class="features__item features__item_three">Ёлочки сохранят свежесть надолго</li>
+                    <li class="features__item features__item_four">Доставим ёлочку за наш счет</li>
+                </ul>
             </div>
 
         </section>
 
         <section class="product" id="one">
-            <div class="container">
-                
+            <div class="container product__container">
+                <div class="product__content">
+                    <h2 class="product__title">Пихта Фразера</h2>
+                    <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+                    <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a href="#" class="product__button product__button_more">Подробнее</a>
+                    </div>
+                </div>
+                <img src="img/fraser-fir.jpg" width="630" height="590" alt="Пихта Фразера" class="product__picture">
             </div>
 
         </section>
 
         <section class="product" id="two">
-            <div class="container">
-                
+            <div class="container product__container">
+                <div class="product__content">
+                    <h2 class="product__title">Русская ель</h2>
+                    <p class="product__features">Русская ель — наиболее традиционная разновидность рождественских деревьев, которую можно встретить в большинстве советских фильмов про новый год</p>
+                    <p class="product__description">Отличительной особенностью русской ёлки являются выраженный хвойный запах, короткие колючие иголки и сравнительно менее пышная крона</p>
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a href="#" class="product__button product__button_more">Подробнее</a>
+                    </div>
+                </div>
+                <img src="img/russian-spruce.jpg" width="630" height="590" alt="Русская ель" class="product__picture">
             </div>
 
         </section>
 
         <section class="product" id="three">
-            <div class="container">
-                
+            <div class="container product__container">
+                <div class="product__content">
+                    <h2 class="product__title">Сибирская пихта</h2>
+                    <p class="product__features">Пихта сибирская является одной из самых красивых и ароматных хвойных пород и ее часто можно встретить в парках и садах</p>
+                    <p class="product__description">Хвоя Сибирской пихты в отличии от еловой крупнее, зеленее, совершенно не колючая и мягкая как трава</p>
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a href="#" class="product__button product__button_more">Подробнее</a>
+                    </div>
+                </div>
+                <img src="img/siberian-fir.jpg" width="630" height="590" alt="Сибирская пихта" class="product__picture">
             </div>
 
         </section>
