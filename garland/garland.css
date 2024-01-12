@@ -11,6 +11,12 @@ body {
     z-index: 99;
 }
 
+/*For second garland - start*/
+.garland-elka_right {
+    transform: scale(-1, 1);
+}
+/*For second garland - end*/
+
 .garland {
     position: fixed;
     top: 0;
