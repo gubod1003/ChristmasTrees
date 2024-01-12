@@ -77,7 +77,7 @@
                 </ul>
             </nav>
 
-            <button class="header__consultation">Консультация</button>
+            <button class="header__consultation" data-consultation="О компании">Консультация</button>
 
         </div>
 
@@ -93,7 +93,7 @@
                     <h1 class="hero__title">Встречай Новый Год с&nbsp;прекрасной живой ёлочкой!</h1>
                     <p class="hero__description">У нас в наличии только самые пушистые и свежие ёлки</p>
 
-                    <a class="hero__down" href="#one">
+                    <a class="hero__down" href="#" data-order="Общий заказ">
                         <img class="hero__down-img" src="img/bauble.png" alt="" width="113" height="139">
                         <span>Заказать</span>
                     </a>
@@ -126,7 +126,7 @@
                     <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
                     <div class="product__button-wrapper">
                         <button class="product__button product__button_order" data-order="Пихта Фразера">Заказать</button>
-                        <a href="#" class="product__button product__button_more">Подробнее</a>
+                        <a href="#" class="product__button product__button_more" data-consultation="Пихта Фразера">Подробнее</a>
                     </div>
                 </div>
                 <img src="img/fraser-fir.jpg" width="630" height="590" alt="Пихта Фразера" class="product__picture">
@@ -142,7 +142,7 @@
                     <p class="product__description">Отличительной особенностью русской ёлки являются выраженный хвойный запах, короткие колючие иголки и сравнительно менее пышная крона</p>
                     <div class="product__button-wrapper">
                         <button class="product__button product__button_order" data-order="Русская ель">Заказать</button>
-                        <a href="#" class="product__button product__button_more">Подробнее</a>
+                        <a href="#" class="product__button product__button_more" data-consultation="Русская ель">Подробнее</a>
                     </div>
                 </div>
                 <img src="img/russian-spruce.jpg" width="630" height="590" alt="Русская ель" class="product__picture">
@@ -158,7 +158,7 @@
                     <p class="product__description">Хвоя Сибирской пихты в отличии от еловой крупнее, зеленее, совершенно не колючая и мягкая как трава</p>
                     <div class="product__button-wrapper">
                         <button class="product__button product__button_order" data-order="Сибирская пихта">Заказать</button>
-                        <a href="#" class="product__button product__button_more">Подробнее</a>
+                        <a href="#" class="product__button product__button_more" data-consultation="Сибирская пихта" >Подробнее</a>
                     </div>
                 </div>
                 <img src="img/siberian-fir.jpg" width="630" height="590" alt="Сибирская пихта" class="product__picture">
@@ -281,7 +281,7 @@
                     <g clip-path="url(#clip0_134_2)">
                     <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
                     </g>
-                    </svg>
+                </svg>
             </button>
 
             <h2 class="modal__title">Оформить заказ</h2>
@@ -305,7 +305,33 @@
     </div>
 
     <div class="overlay overlay_consultation">
+        <div class="modal">
+            <button class="modal__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_134_2)">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+                    </g>
+                </svg>
+            </button>
 
+            <h2 class="modal__title">Получить консультацию</h2>
+
+            <form action="https://jsonplaceholder.typicode.com/posts" class="modal__form" method="post">
+                <label class="modal__label">
+                    <span class="modal__label-text">ФИО</span>
+                    <input type="text" required name="bio" placeholder="Введите ваше ФИО" class="modal__input">
+                </label>
+
+                <label class="modal__label modal__label_last">
+                    <span class="modal__label-text">Телефон</span>
+                    <input type="tel" required name="tel" placeholder="Введите ваш номер телефона" class="modal__input">
+                </label>
+
+                <input type="hidden" name="consultation" class="modal__consultation">
+
+                <button class="modal__button">Получить консультацию</button>
+            </form>
+        </div>
     </div>
 
     <svg class="hide">
